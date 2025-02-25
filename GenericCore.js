@@ -150,6 +150,11 @@ async function createGenericCore(self, persistence, specificLogicInitialisationM
     self.getUserLogs = async function (userID) {
         return persistence.getUserLogs(userID);
     }
+
+    self.getUser = async function (userID) {
+        return await persistence.getUser(userID);
+    }
+
     /*
     state = "SUCCESS"|"FAIL"
     * */
